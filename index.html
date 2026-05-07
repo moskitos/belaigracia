@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Белая грация | Свадебные и вечерние платья</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ЛОГОТИП -->
+<div class="global-logo" id="logoLink">
+    <img src="images/logo.png" alt="Белая грация логотип" onerror="this.src='https://placehold.co/250x425/f9efe8/c28a5a?text=БГ'">
+</div>
+
+<!-- ШАПКА -->
+<header class="site-header" id="mainHeader" style="background-image: url('images/header-bg.jpg'); background-size: cover; background-position: center 15%; background-repeat: no-repeat; height: 100vh; min-height: 600px; position: relative; width: 100%;">
+    <div class="header-content">
+        <h1 class="header-title">Белая грация</h1>
+        <p class="header-subtitle">Салон свадебных платьев</p>
+    </div>
+</header>
+
+<!-- КНОПКА КОРЗИНЫ -->
+<div class="cart-button" id="cartButton">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Блокнот -->
+        <rect x="4" y="2" width="14" height="18" rx="1.5" stroke="#4a3729" stroke-width="1.3" fill="none"/>
+        <!-- Линии для текста (строчки) -->
+        <line x1="7" y1="7" x2="15" y2="7" stroke="#4a3729" stroke-width="1" stroke-linecap="round"/>
+        <line x1="7" y1="10.5" x2="15" y2="10.5" stroke="#4a3729" stroke-width="1" stroke-linecap="round"/>
+        <line x1="7" y1="14" x2="13" y2="14" stroke="#4a3729" stroke-width="1" stroke-linecap="round"/>
+        <!-- Карандаш -->
+        <g transform="translate(14, 14) rotate(35)">
+            <rect x="-1.5" y="-6" width="3" height="12" rx="1" fill="#b87c4f"/>
+            <rect x="-1.5" y="-8" width="3" height="3" rx="0.5" fill="#4a3729"/>
+            <polygon points="-1.5,-8 1.5,-8 0,-11" fill="#4a3729"/>
+        </g>
+    </svg>
+</div>
+
+<!-- ГАМБУРГЕР-МЕНЮ -->
+<div class="burger-menu" id="burgerBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="side-nav" id="sideNav">
+    <button class="close-nav" id="closeNavBtn">✕</button>
+    <a href="#" data-section="wedding">Свадебные платья</a>
+    <a href="#" data-section="evening">Вечерние платья</a>
+    <a href="#" data-section="shoes">Туфли</a>
+    <a href="#" data-section="accessories">Аксессуары</a>
+    <a href="#" data-section="lingerie">Будуары</a>
+    <a href="#" data-section="about">О компании</a>
+</nav>
+
+<!-- СТРЕЛКА ПРОКРУТКИ ВВЕРХ -->
+<div class="scroll-top" id="scrollTopBtn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+    </svg>
+</div>
+
+<!-- ГЛАВНАЯ СТРАНИЦА -->
+<div id="mainHome" class="main-home">
+
+    <div class="category-grid">
+        <div class="category-card" data-section="wedding">
+            <img src="images/фото3.png" alt="Свадебные платья">
+            <span>Свадебные платья</span>
+        </div>
+        <div class="category-card" data-section="evening">
+            <img src="images/вечер.png" alt="Вечерние платья">
+            <span>Вечерние платья</span>
+        </div>
+        <div class="category-card" data-section="shoes">
+            <img src="images/туфли.png" alt="Туфли">
+            <span>Туфли</span>
+        </div>
+        <div class="category-card" data-section="lingerie">
+            <img src="images/фото32.png" alt="Будуары">
+            <span>Будуары</span>
+        </div>
+    </div>
+
+    <div class="accessories-fan-section" id="accessoriesFanTrigger">
+        <div class="fan-text">
+            <h2>Аксессуары</h2>
+        </div>
+        <div class="fan-images">
+            <img src="images/акс1.jpg" class="fan-img fan-img-left" alt="Аксессуар 1">
+            <img src="images/акс2.jpg" class="fan-img fan-img-center" alt="Аксессуар 2">
+            <img src="images/акс3.jpg" class="fan-img fan-img-right" alt="Аксессуар 3">
+        </div>
+    </div>
+
+</div>
+
+<!-- ЖЕМЧУГ (ПЕРЕД ПОДВАЛОМ, ТОЛЬКО НА ГЛАВНОЙ) -->
+<div class="pearl-wrapper">
+    <div class="pearl-image">
+        <img src="images/жемчуг.png" alt="Жемчуг">
+    </div>
+</div>
+
+<!-- СТРАНИЦА: СВАДЕБНЫЕ ПЛАТЬЯ -->
+<section id="wedding-section" class="page-section">
+    <div class="section-title-catalog">Каталог свадебных платьев</div>
+    <div class="catalog-grid-3" id="weddingGrid"></div>
+</section>
+
+<!-- СТРАНИЦА: ВЕЧЕРНИЕ ПЛАТЬЯ -->
+<section id="evening-section" class="page-section">
+    <div class="section-title-catalog">Каталог вечерних платьев</div>
+    <div class="catalog-grid-3" id="eveningGrid"></div>
+</section>
+
+<!-- СТРАНИЦА: ТУФЛИ -->
+<section id="shoes-section" class="page-section">
+    <div class="section-title-catalog">Каталог туфель</div>
+    <div class="catalog-grid-3" id="shoesGrid"></div>
+</section>
+
+<!-- СТРАНИЦА: АКСЕССУАРЫ -->
+<section id="accessories-section" class="page-section">
+    <div class="section-title-catalog">Каталог аксессуаров</div>
+    <div class="catalog-grid-3" id="accessoriesGrid"></div>
+</section>
+
+<!-- СТРАНИЦА: БУДУАРЫ -->
+<section id="lingerie-section" class="page-section">
+    <div class="section-title-catalog">Каталог будуаров</div>
+    <div class="catalog-grid-3" id="lingerieGrid"></div>
+</section>
+
+<!-- СТРАНИЦА: О КОМПАНИИ -->
+<section id="about-section" class="page-section">
+    <div class="section-title-catalog">О компании</div>
+    <div class="about-container">
+        <div class="about-text">
+            Добро пожаловать в салон «Белая грация» — пространство, где исполняются мечты. Мы знаем, как важно для каждой невесты найти то самое платье, в котором она почувствует себя настоящей королевой. Наши коллекции включает в себя как роскошные свадебные наряды, так и изысканные вечерние платья, а туфли и аксессуары -  подчеркнут вашу индивидуальность.
+        </div>
+        <div class="about-text">
+            В «Белой грации» мы создали атмосферу тепла и заботы, чтобы процесс выбора платья приносил только удовольствие. Наши стилисты помогут подобрать идеальный образ, учтут все ваши пожелания и сделают примерку комфортной и вдохновляющей. Более 10 лет мы помогаем невестам сиять в самый важный день их жизни.
+        </div>
+        <div class="about-text">
+            🕊️ «Белая грация» — больше чем салон. Мы про любовь, про стиль, про ту самую магию, когда платье выбирает вас. Приходите знакомиться!
+        </div>
+    </div>
+    <div class="about-photos">
+        <div class="photo-row">
+            <img src="images/about1.png" alt="Салон 1" class="about-photo">
+            <img src="images/about2.png" alt="Салон 2" class="about-photo">
+        </div>
+        <div class="photo-row">
+            <img src="images/about3.jpg" alt="Салон 3" class="about-photo">
+            <img src="images/about4.jpg" alt="Салон 4" class="about-photo">
+        </div>
+    </div>
+    <div class="address-inline">
+        <div class="address-block">
+            <p>📍 Адрес: Санкт-Петербург, Невский проспект, 88, БЦ «Невский Атлант»</p>
+            <p>📞 Телефон: <strong id="phoneNumber">8 956 678 45 67</strong></p>
+            <p>✉️ Email: info@belaya-graciya.ru</p>
+            <p>⭐ Режим работы: ежедневно 11:00 – 21:00</p>
+            <p>🚇 Метро: «Площадь Восстания» / «Маяковская»</p>
+        </div>
+    </div>
+</section>
+
+<!-- МОДАЛЬНЫЕ ОКНА -->
+<div id="productPageModal" class="modal">
+    <div class="modal-content product-modal">
+        <span class="modal-close" id="closeProductModal">✕</span>
+        <div id="productModalContent"></div>
+        <button class="modal-order-btn" id="fromProductToOrderBtn">Оформить заказ</button>
+    </div>
+</div>
+
+<div id="orderModal" class="modal">
+    <div class="modal-content order-modal-content">
+        <button class="back-to-product" id="backToProductBtn">←</button>
+        <span class="modal-close" id="closeOrderModalBtn">✕</span>
+        <h2>Оформление заказа</h2>
+        <form id="orderFormModal">
+            <div class="form-group"><label>Ваше имя *</label><input type="text" id="modalUserName" required></div>
+            <div class="form-group"><label>Телефон *</label><input type="tel" id="modalUserPhone" required></div>
+            <div class="form-group"><label>Email</label><input type="email" id="modalUserEmail"></div>
+            <div class="form-group"><label>Товар (артикул/название)</label><textarea id="modalOrderProduct" rows="3"></textarea></div>
+            <button type="submit" class="submit-order">Отправить заказ</button>
+            <p class="form-note">Мы свяжемся с вами в ближайшее время</p>
+        </form>
+    </div>
+</div>
+
+<!-- ПОДВАЛ -->
+<footer class="custom-footer">
+    <div class="footer-left-img" id="footerLeftIcon">
+        <img src="images/footer-icon.png" alt="Иконка телефона">
+    </div>
+    <div class="footer-phone" id="footerPhone">8 956 678 45 67</div>
+    <div class="footer-icons">
+        <a href="https://vk.ru/club238412562" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon1.png" alt="ВКонтакте" class="footer-icon">
+        </a>
+        <a href="https://t.me/belaigracia" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon3.png" alt="Telegram" class="footer-icon">
+        </a>
+    </div>
+</footer>
+
+<script>
+    // ========= ДАННЫЕ ДЛЯ КАТАЛОГОВ =========
+    const weddingDresses = [
+        { name: "Платье «Астория»", price: 150000, img: "images/фото1.png", article: "W-001", size: "42-52", fabric: "Итальянский шелк, кружево", color: "Белый, слоновая кость", silhouette: "X-образный", extraImages: ["images/фото1.2.png"] },
+        { name: "Платье «Вивьен»", price: 120000, img: "images/фото2.png", article: "W-002", size: "44-54", fabric: "Микросатин", color: "Белый, шампань", silhouette: "Русалка", extraImages: ["images/фото2.2.png", "images/фото2.3.png"] },
+        { name: "Платье «Грейс»", price: 90000, img: "images/фото3.png", article: "W-003", size: "42-56", fabric: "Тафта, гипюр", color: "Белый, молочный", silhouette: "X-образный", extraImages: ["images/фото3.2.png", "images/фото3.3.png"] },
+        { name: "Платье «Марсель»", price: 70000, img: "images/фото4.png", article: "W-004", size: "46-58", fabric: "Атлас", color: "Белый", silhouette: "X-образный", extraImages: ["images/фото4.2.png", "images/фото4.3.png"] },
+        { name: "Платье «Шанти»", price: 60000, img: "images/фото5.png", article: "W-005", size: "44-50", fabric: "Хлопковое кружево", color: "Слоновая кость", silhouette: "X-образный", extraImages: ["images/фото5.2.png", "images/фото5.3.png"] },
+        { name: "Платье «Классик»", price: 50000, img: "images/фото6.png", article: "W-006", size: "48-60", fabric: "Костюмная ткань", color: "Белый", silhouette: "Приталенный", extraImages: ["images/фото6.2.png", "images/фото6.3.png"] },
+        { name: "Платье «Элен»", price: 40000, img: "images/фото7.png", article: "W-007", size: "42-50", fabric: "Шифон", color: "Белый, шампань", silhouette: "X-образный", extraImages: ["images/фото7.2.png", "images/фото7.3.png"] },
+        { name: "Платье «Роза»", price: 30000, img: "images/фото8.png", article: "W-008", size: "44-52", fabric: "Органза", color: "Белая лилия", silhouette: "X-образный", extraImages: ["images/фото8.2.png", "images/фото8.3.png", "images/фото8.4.png"] },
+        { name: "Платье «Лаванда»", price: 25000, img: "images/фото9.png", article: "W-009", size: "46-54", fabric: "Шифон", color: "Снежный", silhouette: "Русалка", extraImages: ["images/фото9.2.png", "images/фото9.3.png"] }
+    ];
+
+    const eveningDresses = [
+    { name: "Вечернее «Адель»", price: 70000, img: "images/фото10.png", article: "E-001", size: "42-54", fabric: "Атлас", color: "Пудровый, голубой, бордовый", silhouette: "Русалка", extraImages: [] },
+    { name: "Вечернее «Блэк тафта»", price: 65000, img: "images/фото11.png", article: "E-002", size: "44-56", fabric: "Тафта, шифон", color: "Черничный, черный, фиолетовцый", silhouette: "Пышный", extraImages: [] },
+    { name: "Вечернее «Марго»", price: 60000, img: "images/фото12.png", article: "E-003", size: "42-50", fabric: "Тафта", color: "Чёрный, изумруд", silhouette: "Греческий", extraImages: [] },
+    { name: "Платье «Сапфир»", price: 55000, img: "images/фото13.png", article: "E-004", size: "44-52", fabric: "Шелк, гипюр", color: "Глициновый, синий, аметистовый", silhouette: "А-силуэт", extraImages: [] },
+    { name: "Вечернее «Эмира»", price: 50000, img: "images/фото14.png", article: "E-005", size: "46-58", fabric: "Фатин", color: "Пудровый, аметистовый", silhouette: "Русалка", extraImages: [] },
+    { name: "Платье «Ноктюрн»", price: 45000, img: "images/фото15.png", article: "E-006", size: "42-52", fabric: "Атлас", color: "Стальной,темно-синий", silhouette: "Прямой", extraImages: [] },
+    { name: "Вечернее «Луара»", price: 40000, img: "images/фото16.png", article: "E-007", size: "44-54", fabric: "Сатин", color: "Сахарная вата, бежевый,белый", silhouette: "Песочные часы", extraImages: [] },
+    { name: "Платье «Джаз»", price: 35000, img: "images/фото17.png", article: "E-008", size: "42-50", fabric: "Гипюр", color: "Жасмин,серебро", silhouette: "Футляр", extraImages: [] },
+    { name: "Вечернее «Скарлет»", price: 30000, img: "images/фото18.png", article: "E-009", size: "44-52", fabric: "Органза", color: "Полынь, красный", silhouette: "Ампир", extraImages: [] }
+];
+
+    const shoesCollection = [
+        { name: "Туфли «Жемчужные»", price: 15000, img: "images/фото19.png", article: "S-001", size: "35-41", color: "Белый", material: "Натуральная кожа" },
+        { name: "Туфли «Арабелла»", price: 20000, img: "images/фото20.png", article: "S-002", size: "36-40", color: "Шампань", material: "Натуральная кожа" },
+        { name: "Кеды «Кристалл»", price: 12000, img: "images/фото21.png", article: "S-003", size: "35-39", color: "Светло-серый", material: "Хлопок" },
+        { name: "Туфли «Мэрилин»", price: 9000, img: "images/фото22.png", article: "S-004", size: "36-42", color: "Серебро", material: "Стразы" },
+        { name: "Туфли «Этуаль»", price: 7000, img: "images/фото23.png", article: "S-005", size: "37-41", color: "Слоновая кость", material: "Замша" },
+        { name: "Туфли «Грация»", price: 14000, img: "images/фото24.png", article: "S-006", size: "35-40", color: "Белый", material: "Атлас" },
+        { name: "Туфли «Верона»", price: 24000, img: "images/фото25.png", article: "S-007", size: "36-39", color: "Пудровый", material: "Атлас" },
+        { name: "Туфли «Флора»", price: 27000, img: "images/фото26.png", article: "S-008", size: "35-38", color: "Золото", material: "Металлик" },
+        { name: "Туфли «Бриз»", price: 11000, img: "images/фото27.png", article: "S-009", size: "37-42", color: "Бирюзовый", material: "Натуральная кожа" }
+    ];
+
+    const accessoriesItems = [
+        { name: "Ободок «Весна»", price: 8500, img: "images/акс1.jpg", article: "A-001", color: "Серебро", material: "Сатин" },
+        { name: "Серьги «Белые розы»", price: 4200, img: "images/акс2.jpg", article: "A-002", color: "Белый", material: "Атлас" },
+        { name: "Серьги «Жемчужный бантик»", price: 3800, img: "images/акс3.jpg", article: "A-003", color: "Белый", material: "Жемчуг" },
+        { name: "Колье «Жемчужная роса»", price: 12500, img: "images/акс4.jpg", article: "A-004", color: "Белый", material: "Жемчуг, бисер" },
+        { name: "Серьги «Лёгкость»", price: 7000, img: "images/акс5.jpg", article: "A-005", color: "Шампань", material: "Органза" },
+        { name: "Колье жемчужное", price: 3500, img: "images/акс6.jpg", article: "A-006", color: "Белый", material: "Жемчуг" },
+        { name: "Колье «Слёзы счастья»", price: 2900, img: "images/акс7.png", article: "A-007", color: "Белый", material: "Жемчуг" },
+        { name: "Колье «Нимфа»", price: 9800, img: "images/акс8.jpg", article: "A-008", color: "Слоновая кость", material: "Жемчуг" },
+        { name: "Ободок «Цветущий сад»", price: 6500, img: "images/акс9.png", article: "A-009", color: "Белый", material: "Бисер" }
+    ];
+
+    const lingerieItems = [
+        { name: "Комплект «Нежность»", price: 8000, img: "images/фото28.png", article: "L-001", sizes: "S-XL", fabric: "Шелк", color: "Белый" },
+        { name: "Комплект «Императрица»", price: 12500, img: "images/фото29.png", article: "L-002", sizes: "M-XXL", fabric: "Кружево", color: "Белый" },
+        { name: "Комплект «Жемчуг»", price: 4500, img: "images/фото30.png", article: "L-003", sizes: "S-XXL", fabric: "Хлопок", color: "Жемчужный" },
+        { name: "Комплект «Лаванда»", price: 3200, img: "images/фото31.png", article: "L-004", sizes: "S-L", fabric: "Сатин", color: "Белый" },
+        { name: "Комплект «Свадебный»", price: 5900, img: "images/фото32.png", article: "L-005", sizes: "M-XL", fabric: "Шелк, кружево", color: "Слоновая кость" },
+        { name: "Комплект «Белая лилия»", price: 9800, img: "images/фото33.png", article: "L-006", sizes: "S-XL", fabric: "Шелк", color: "Белый" },
+        { name: "Комплект «Пион»", price: 7000, img: "images/фото34.png", article: "L-007", sizes: "M-XL", fabric: "Микросатин", color: "Белый" },
+        { name: "Комплект «Ангел»", price: 3600, img: "images/фото35.png", article: "L-008", sizes: "S-L", fabric: "Эластан", color: "Белый" },
+        { name: "Комплект «Жемчужный»", price: 4200, img: "images/фото36.png", article: "L-009", sizes: "M-XL", fabric: "Тюль", color: "Шампань" }
+    ];
+
+    let lastOpenedItem = null;
+    let lastOpenedHasSlider = false;
+    let isFromCart = false; // флаг: открыта ли корзина напрямую (не из товара)
+
+    function createSliderForItem(item) {
+        const allImages = [item.img, ...(item.extraImages || [])];
+        const sliderDiv = document.createElement('div');
+        sliderDiv.className = 'product-slider';
+        const mainImg = document.createElement('img');
+        mainImg.className = 'slider-main-image';
+        mainImg.alt = item.name;
+        mainImg.src = allImages[0];
+        mainImg.onerror = function() { this.src = 'https://placehold.co/600x800/f7e8dd/c48154?text=Фото'; };
+        const prevBtn = document.createElement('button');
+        prevBtn.innerHTML = '❮';
+        prevBtn.className = 'slider-btn slider-prev';
+        const nextBtn = document.createElement('button');
+        nextBtn.innerHTML = '❯';
+        nextBtn.className = 'slider-btn slider-next';
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'slider-dots';
+        sliderDiv.appendChild(mainImg);
+        if (allImages.length > 1) {
+            sliderDiv.appendChild(prevBtn);
+            sliderDiv.appendChild(nextBtn);
+        }
+        sliderDiv.appendChild(dotsContainer);
+        let currentIdx = 0;
+        function updateSlider(index) {
+            if (index < 0) index = 0;
+            if (index >= allImages.length) index = allImages.length - 1;
+            currentIdx = index;
+            mainImg.src = allImages[currentIdx];
+            const dots = dotsContainer.querySelectorAll('.slider-dot');
+            dots.forEach((dot, i) => {
+                if (i === currentIdx) dot.classList.add('active');
+                else dot.classList.remove('active');
+            });
+        }
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            allImages.forEach((_, idx) => {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot';
+                if (idx === currentIdx) dot.classList.add('active');
+                dot.addEventListener('click', () => updateSlider(idx));
+                dotsContainer.appendChild(dot);
+            });
+        }
+        if (allImages.length > 1) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                updateSlider(currentIdx - 1);
+            });
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                updateSlider(currentIdx + 1);
+            });
+        }
+        createDots();
+        return { sliderDiv, imagesCount: allImages.length };
+    }
+
+    function showProductPage(item, hasSlider = false) {
+    lastOpenedItem = item;
+    lastOpenedHasSlider = hasSlider;
+    const modal = document.getElementById('productPageModal');
+    const modalContent = modal.querySelector('.modal-content');
+    
+    // Убираем предыдущий класс, если был
+    modalContent.classList.remove('shoes-modal');
+    
+    // Добавляем класс для туфель (если артикул начинается с S-)
+    if (item.article && item.article.startsWith('S-')) {
+        modalContent.classList.add('shoes-modal');
+    }
+    
+    const content = document.getElementById('productModalContent');
+    content.innerHTML = '';
+    if (hasSlider && item.extraImages !== undefined) {
+        const { sliderDiv } = createSliderForItem(item);
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'product-page-info';
+        infoDiv.innerHTML = `
+            <h2>${item.name}</h2>
+            <p><strong>Артикул:</strong> ${item.article || 'W-000'}</p>
+            <p><strong>Размеры в наличии:</strong> ${item.size || item.sizes || '42-56'}</p>
+            <p><strong>Состав ткани:</strong> ${item.fabric || item.material || 'Высококачественные материалы'}</p>
+            <p><strong>Цвета:</strong> ${item.color || 'в ассортименте'}</p>
+            <p><strong>Силуэт:</strong> ${item.silhouette || 'Классический'}</p>
+            <p><strong>Цена:</strong> ${item.price.toLocaleString('ru-RU')} руб.</p>
+        `;
+        const flexContainer = document.createElement('div');
+        flexContainer.className = 'product-page-content';
+        flexContainer.appendChild(sliderDiv);
+        flexContainer.appendChild(infoDiv);
+        content.appendChild(flexContainer);
+    } else {
+        const noSliderHtml = `
+            <div class="product-page-content">
+                <img src="${item.img}" alt="${item.name}" class="product-page-img" onerror="this.src='https://placehold.co/600x800/f7e8dd/c48154?text=Товар'">
+                <div class="product-page-info">
+                    <h2>${item.name}</h2>
+                    <p><strong>Артикул:</strong> ${item.article || 'ACC-000'}</p>
+                    <p><strong>Размеры в наличии:</strong> ${item.size || item.sizes || 'уточняйте'}</p>
+                    <p><strong>Состав ткани:</strong> ${item.fabric || item.material || 'Высококачественные материалы'}</p>
+                    <p><strong>Цвета:</strong> ${item.color || 'в ассортименте'}</p>
+                    <p><strong>Цена:</strong> ${item.price.toLocaleString('ru-RU')} руб.</p>
+                </div>
+            </div>
+        `;
+        content.innerHTML = noSliderHtml;
+    }
+    modal.style.display = 'block';
+    const orderBtn = document.getElementById('fromProductToOrderBtn');
+    const newBtn = orderBtn.cloneNode(true);
+    orderBtn.parentNode.replaceChild(newBtn, orderBtn);
+    newBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        showOrderModal(item, false);
+    });
+}
+
+    function showOrderModal(item, fromCart = false) {
+        isFromCart = fromCart;
+        lastOpenedItem = item;
+        const orderModalElem = document.getElementById('orderModal');
+        const productField = document.getElementById('modalOrderProduct');
+        const backButton = document.getElementById('backToProductBtn');
+        
+        // Кнопка назад: показываем ТОЛЬКО если заказ НЕ из корзины (т.е. из карточки товара)
+        if (backButton) {
+            if (!fromCart && item) {
+                backButton.style.display = 'flex';
+            } else {
+                backButton.style.display = 'none';
+            }
+        }
+        
+        if (productField && item) {
+            productField.value = `${item.name} (Арт. ${item.article || 'ACC-000'})`;
+        } else if (productField) {
+            productField.value = '';
+        }
+        orderModalElem.style.display = 'block';
+    }
+
+    function renderGrid3(containerId, items, showName = true) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            let nameHtml = showName ? `<div class="product-title">${item.name}</div>` : '';
+            card.innerHTML = `<img class="card-img" src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.src='https://placehold.co/600x800/f7e8dd/c48154?text=Товар'">${nameHtml}<div class="price">${item.price.toLocaleString('ru-RU')} руб.</div>`;
+            card.style.cursor = 'pointer';
+            const hasSlider = containerId === 'weddingGrid' && item.extraImages !== undefined;
+            card.addEventListener('click', () => showProductPage(item, hasSlider));
+            container.appendChild(card);
+        });
+    }
+
+    renderGrid3('weddingGrid', weddingDresses, true);
+    renderGrid3('eveningGrid', eveningDresses, true);
+    renderGrid3('shoesGrid', shoesCollection, true);
+    renderGrid3('accessoriesGrid', accessoriesItems, true);
+    renderGrid3('lingerieGrid', lingerieItems, true);
+
+    // ========= УПРАВЛЕНИЕ ИНТЕРФЕЙСОМ =========
+    const burger = document.getElementById('burgerBtn');
+    const sideNav = document.getElementById('sideNav');
+    const overlay = document.getElementById('navOverlay');
+    const closeNavBtn = document.getElementById('closeNavBtn');
+    const mainHome = document.getElementById('mainHome');
+    const mainHeader = document.getElementById('mainHeader');
+    const sections = document.querySelectorAll('.page-section');
+    const navLinks = document.querySelectorAll('.side-nav a');
+    const productModal = document.getElementById('productPageModal');
+    const orderModalElem = document.getElementById('orderModal');
+    const closeProductModal = document.getElementById('closeProductModal');
+    const closeOrderModalBtn = document.getElementById('closeOrderModalBtn');
+    const backToProductBtn = document.getElementById('backToProductBtn');
+    const cartButton = document.getElementById('cartButton');
+    const pearlWrapper = document.querySelector('.pearl-wrapper');
+
+    // Функция для скрытия/показа жемчуга
+    function togglePearlVisibility() {
+        if (!pearlWrapper) return;
+        const isMainPageActive = mainHome.style.display !== 'none';
+        if (isMainPageActive) {
+            pearlWrapper.style.display = 'block';
+        } else {
+            pearlWrapper.style.display = 'none';
+        }
+    }
+
+    if (cartButton) {
+        cartButton.addEventListener('click', () => {
+            if (lastOpenedItem) {
+                showOrderModal(lastOpenedItem, true); // true = из корзины (без кнопки назад)
+            } else {
+                document.getElementById('modalOrderProduct').value = '';
+                showOrderModal(null, true); // true = из корзины (без кнопки назад)
+            }
+        });
+    }
+
+    function openMenu() { sideNav.classList.add('open'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { sideNav.classList.remove('open'); overlay.classList.remove('active'); document.body.style.overflow = ''; }
+    
+    burger?.addEventListener('click', openMenu);
+    closeNavBtn?.addEventListener('click', closeMenu);
+    overlay?.addEventListener('click', closeMenu);
+
+    function showMainPage() {
+        mainHome.style.display = 'block';
+        mainHeader.style.display = 'block';
+        sections.forEach(sec => sec.classList.remove('active-section'));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        closeMenu();
+        togglePearlVisibility();
+    }
+
+    function showSection(sectionId) {
+        mainHome.style.display = 'none';
+        mainHeader.style.display = 'none';
+        sections.forEach(sec => sec.classList.remove('active-section'));
+        const target = document.getElementById(`${sectionId}-section`);
+        if (target) target.classList.add('active-section');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        closeMenu();
+        togglePearlVisibility();
+    }
+
+    const globalLogo = document.querySelector('.global-logo');
+    if (globalLogo) globalLogo.addEventListener('click', showMainPage);
+
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const section = card.getAttribute('data-section');
+            if (section) showSection(section);
+        });
+    });
+
+    const fanTrigger = document.getElementById('accessoriesFanTrigger');
+    if (fanTrigger) {
+        fanTrigger.style.cursor = 'pointer';
+        fanTrigger.addEventListener('click', () => showSection('accessories'));
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const section = link.getAttribute('data-section');
+            if (section === 'about') showSection('about');
+            else if (section === 'wedding') showSection('wedding');
+            else if (section === 'evening') showSection('evening');
+            else if (section === 'shoes') showSection('shoes');
+            else if (section === 'accessories') showSection('accessories');
+            else if (section === 'lingerie') showSection('lingerie');
+            else showSection(section);
+        });
+    });
+
+    if (closeProductModal) closeProductModal.addEventListener('click', () => productModal.style.display = 'none');
+    if (closeOrderModalBtn) closeOrderModalBtn.addEventListener('click', () => orderModalElem.style.display = 'none');
+    if (backToProductBtn) {
+        backToProductBtn.addEventListener('click', () => {
+            orderModalElem.style.display = 'none';
+            if (lastOpenedItem && !isFromCart) {
+                showProductPage(lastOpenedItem, lastOpenedHasSlider);
+            }
+        });
+    }
+    window.addEventListener('click', (e) => {
+        if (e.target === productModal) productModal.style.display = 'none';
+        if (e.target === orderModalElem) orderModalElem.style.display = 'none';
+    });
+
+    document.getElementById('orderFormModal')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Спасибо! Ваш заказ отправлен. Мы свяжемся с вами в ближайшее время.');
+        orderModalElem.style.display = 'none';
+        document.getElementById('orderFormModal').reset();
+    });
+
+    function makePhoneClickable(phoneElement) {
+        if (phoneElement) {
+            const phoneNumber = phoneElement.innerText.replace(/\s/g, '');
+            phoneElement.style.cursor = 'pointer';
+            phoneElement.addEventListener('click', () => {
+                window.location.href = `tel:${phoneNumber}`;
+            });
+        }
+    }
+
+    makePhoneClickable(document.getElementById('footerPhone'));
+    makePhoneClickable(document.getElementById('phoneNumber'));
+
+    const footerLeftIcon = document.getElementById('footerLeftIcon');
+    if (footerLeftIcon) {
+        footerLeftIcon.style.cursor = 'pointer';
+        footerLeftIcon.addEventListener('click', () => {
+            const phoneNumber = document.getElementById('footerPhone').innerText.replace(/\s/g, '');
+            window.location.href = `tel:${phoneNumber}`;
+        });
+    }
+
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    showMainPage();
+    togglePearlVisibility();
+</script>
+</body>
+</html>
