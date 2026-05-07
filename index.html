@@ -279,40 +279,63 @@
     let isFromCart = false; // флаг: открыта ли корзина напрямую (не из товара)
 
     function createSliderForItem(item) {
-        const allImages = [item.img, ...(item.extraImages || [])];
-        const sliderDiv = document.createElement('div');
-        sliderDiv.className = 'product-slider';
-        const mainImg = document.createElement('img');
-        mainImg.className = 'slider-main-image';
-        mainImg.alt = item.name;
-        mainImg.src = allImages[0];
-        mainImg.onerror = function() { this.src = 'https://placehold.co/600x800/f7e8dd/c48154?text=Фото'; };
-        const prevBtn = document.createElement('button');
-        prevBtn.innerHTML = '❮';
-        prevBtn.className = 'slider-btn slider-prev';
-        const nextBtn = document.createElement('button');
-        nextBtn.innerHTML = '❯';
-        nextBtn.className = 'slider-btn slider-next';
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'slider-dots';
-        sliderDiv.appendChild(mainImg);
-        if (allImages.length > 1) {
-            sliderDiv.appendChild(prevBtn);
-            sliderDiv.appendChild(nextBtn);
-        }
-        sliderDiv.appendChild(dotsContainer);
-        let currentIdx = 0;
-        function updateSlider(index) {
-            if (index < 0) index = 0;
-            if (index >= allImages.length) index = allImages.length - 1;
-            currentIdx = index;
-            mainImg.src = allImages[currentIdx];
-            const dots = dotsContainer.querySelectorAll('.slider-dot');
-            dots.forEach((dot, i) => {
-                if (i === currentIdx) dot.classList.add('active');
-                else dot.classList.remove('active');
-            });
-        }
+    const allImages = [item.img, ...(item.extraImages || [])];
+    const sliderDiv = document.createElement('div');
+    sliderDiv.className = 'product-slider';
+    const mainImg = document.createElement('img');
+    mainImg.className = 'slider-main-image';
+    mainImg.alt = item.name;
+    mainImg.src = allImages[0];
+    mainImg.onerror = function() { this.src = 'https://placehold.co/600x800/f7e8dd/c48154?text=Фото'; };
+    const prevBtn = document.createElement('button');
+    prevBtn.innerHTML = '❮';
+    prevBtn.className = 'slider-btn slider-prev';
+    const nextBtn = document.createElement('button');
+    nextBtn.innerHTML = '❯';
+    nextBtn.className = 'slider-btn slider-next';
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'slider-dots';
+    sliderDiv.appendChild(mainImg);
+    if (allImages.length > 1) {
+        sliderDiv.appendChild(prevBtn);
+        sliderDiv.appendChild(nextBtn);
+    }
+    sliderDiv.appendChild(dotsContainer);
+    let currentIdx = 0;
+    function updateSlider(index) {
+        if (index < 0) index = 0;
+        if (index >= allImages.length) index = allImages.length - 1;
+        currentIdx = index;
+        mainImg.src = allImages[currentIdx];
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, i) => {
+            if (i === currentIdx) dot.classList.add('active');
+            else dot.classList.remove('active');
+        });
+    }
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        allImages.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.className = 'slider-dot';
+            if (idx === currentIdx) dot.classList.add('active');
+            dot.addEventListener('click', () => updateSlider(idx));
+            dotsContainer.appendChild(dot);
+        });
+    }
+    if (allImages.length > 1) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateSlider(currentIdx - 1);
+        });
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateSlider(currentIdx + 1);
+        });
+    }
+    createDots();
+    return { sliderDiv, imagesCount: allImages.length };
+}
         function createDots() {
             dotsContainer.innerHTML = '';
             allImages.forEach((_, idx) => {
