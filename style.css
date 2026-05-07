@@ -1366,3 +1366,109 @@ body:has(.page-section.active-section) .pearl-wrapper {
         margin: 5% auto;
     }
 }
+/* ========= ССЫЛКА "ПОДРОБНЕЕ..." ========= */
+.more-info-link {
+    font-size: 0.85rem;
+    color: #b87c4f;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px dashed #b87c4f;
+    transition: 0.2s;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.more-info-link:hover {
+    color: #9b623c;
+    border-bottom-color: #9b623c;
+}
+
+.product-more-info {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #f0e2d4;
+}
+
+.product-more-info p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+}
+
+/* Список параметров модели */
+.model-params-list {
+    margin: 5px 0 8px 20px;
+    font-size: 0.9rem;
+    color: #2c241a;
+}
+
+.model-params-list li {
+    margin: 3px 0;
+}
+
+/* Мобильная версия — прижимаем текст левее */
+@media (max-width: 768px) {
+    .more-info-link {
+        font-size: 0.8rem;
+        margin-top: 6px;
+    }
+    
+    .product-page-info {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .product-page-info p,
+    .product-page-info h2 {
+        text-align: left;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    .model-params-list {
+        margin: 5px 0 8px 18px;
+        padding-left: 0;
+    }
+    
+    .product-page-content {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-page-info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .model-params-list {
+        margin: 5px 0 8px 15px;
+    }
+}
+/* ========= ССЫЛКА "СКРЫТЬ" ВВЕРХУ БЛОКА ========= */
+.hide-info-link {
+    font-size: 0.8rem;
+    color: #b87c4f;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px dashed #b87c4f;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.hide-info-link:hover {
+    color: #9b623c;
+    border-bottom-color: #9b623c;
+}
+
+.product-more-info {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #f0e2d4;
+}
+
+@media (max-width: 768px) {
+    .hide-info-link {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+}
