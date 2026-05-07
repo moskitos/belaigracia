@@ -215,28 +215,28 @@
 <script>
     // ========= ДАННЫЕ ДЛЯ КАТАЛОГОВ =========
     const weddingDresses = [
-        { name: "Платье «Астория»", price: 150000, img: "images/фото1.png", article: "W-001", size: "42-52", fabric: "Итальянский шелк, кружево", color: "Белый, слоновая кость", silhouette: "X-образный", extraImages: ["images/фото1.2.png"] },
-        { name: "Платье «Вивьен»", price: 120000, img: "images/фото2.png", article: "W-002", size: "44-54", fabric: "Микросатин", color: "Белый, шампань", silhouette: "Русалка", extraImages: ["images/фото2.2.png", "images/фото2.3.png"] },
-        { name: "Платье «Грейс»", price: 90000, img: "images/фото3.png", article: "W-003", size: "42-56", fabric: "Тафта, гипюр", color: "Белый, молочный", silhouette: "X-образный", extraImages: ["images/фото3.2.png", "images/фото3.3.png"] },
-        { name: "Платье «Марсель»", price: 70000, img: "images/фото4.png", article: "W-004", size: "46-58", fabric: "Атлас", color: "Белый", silhouette: "X-образный", extraImages: ["images/фото4.2.png", "images/фото4.3.png"] },
-        { name: "Платье «Шанти»", price: 60000, img: "images/фото5.png", article: "W-005", size: "44-50", fabric: "Хлопковое кружево", color: "Слоновая кость", silhouette: "X-образный", extraImages: ["images/фото5.2.png", "images/фото5.3.png"] },
-        { name: "Платье «Классик»", price: 50000, img: "images/фото6.png", article: "W-006", size: "48-60", fabric: "Костюмная ткань", color: "Белый", silhouette: "Приталенный", extraImages: ["images/фото6.2.png", "images/фото6.3.png"] },
-        { name: "Платье «Элен»", price: 40000, img: "images/фото7.png", article: "W-007", size: "42-50", fabric: "Шифон", color: "Белый, шампань", silhouette: "X-образный", extraImages: ["images/фото7.2.png", "images/фото7.3.png"] },
-        { name: "Платье «Роза»", price: 30000, img: "images/фото8.png", article: "W-008", size: "44-52", fabric: "Органза", color: "Белая лилия", silhouette: "X-образный", extraImages: ["images/фото8.2.png", "images/фото8.3.png", "images/фото8.4.png"] },
-        { name: "Платье «Лаванда»", price: 25000, img: "images/фото9.png", article: "W-009", size: "46-54", fabric: "Шифон", color: "Снежный", silhouette: "Русалка", extraImages: ["images/фото9.2.png", "images/фото9.3.png"] }
+    { name: "Платье «Астория»", price: 150000, img: "images/фото1.png", article: "W-001", size: "42-52", fabric: "Итальянский шелк, кружево", color: "Белый, слоновая кость", silhouette: "X-образный", extraImages: ["images/фото1.2.png"], modelParams: "172-84-96" },
+    { name: "Платье «Вивьен»", price: 120000, img: "images/фото2.png", article: "W-002", size: "44-54", fabric: "Микросатин", color: "Белый, шампань", silhouette: "Русалка", extraImages: ["images/фото2.2.png", "images/фото2.3.png"], modelParams: "175-86-98" },
+    { name: "Платье «Грейс»", price: 90000, img: "images/фото3.png", article: "W-003", size: "42-56", fabric: "Тафта, гипюр", color: "Белый, молочный", silhouette: "X-образный", extraImages: ["images/фото3.2.png", "images/фото3.3.png"], modelParams: "170-83-95" },
+    { name: "Платье «Марсель»", price: 70000, img: "images/фото4.png", article: "W-004", size: "46-58", fabric: "Атлас", color: "Белый", silhouette: "X-образный", extraImages: ["images/фото4.2.png", "images/фото4.3.png"], modelParams: "174-88-100" },
+    { name: "Платье «Шанти»", price: 60000, img: "images/фото5.png", article: "W-005", size: "44-50", fabric: "Хлопковое кружево", color: "Слоновая кость", silhouette: "X-образный", extraImages: ["images/фото5.2.png", "images/фото5.3.png"], modelParams: "168-82-92" },
+    { name: "Платье «Классик»", price: 50000, img: "images/фото6.png", article: "W-006", size: "48-60", fabric: "Костюмная ткань", color: "Белый", silhouette: "Приталенный", extraImages: ["images/фото6.2.png", "images/фото6.3.png"], modelParams: "176-90-102" },
+    { name: "Платье «Элен»", price: 40000, img: "images/фото7.png", article: "W-007", size: "42-50", fabric: "Шифон", color: "Белый, шампань", silhouette: "X-образный", extraImages: ["images/фото7.2.png", "images/фото7.3.png"], modelParams: "171-85-97" },
+    { name: "Платье «Роза»", price: 30000, img: "images/фото8.png", article: "W-008", size: "44-52", fabric: "Органза", color: "Белая лилия", silhouette: "X-образный", extraImages: ["images/фото8.2.png", "images/фото8.3.png", "images/фото8.4.png"], modelParams: "169-84-94" },
+    { name: "Платье «Лаванда»", price: 25000, img: "images/фото9.png", article: "W-009", size: "46-54", fabric: "Шифон", color: "Снежный", silhouette: "Русалка", extraImages: ["images/фото9.2.png", "images/фото9.3.png"], modelParams: "173-87-99" }
     ];
 
     const eveningDresses = [
-    { name: "Вечернее «Адель»", price: 70000, img: "images/фото10.png", article: "E-001", size: "42-54", fabric: "Атлас", color: "Пудровый, голубой, бордовый", silhouette: "Русалка", extraImages: [] },
-    { name: "Вечернее «Блэк тафта»", price: 65000, img: "images/фото11.png", article: "E-002", size: "44-56", fabric: "Тафта, шифон", color: "Черничный, черный, фиолетовцый", silhouette: "Пышный", extraImages: [] },
-    { name: "Вечернее «Марго»", price: 60000, img: "images/фото12.png", article: "E-003", size: "42-50", fabric: "Тафта", color: "Чёрный, изумруд", silhouette: "Греческий", extraImages: [] },
-    { name: "Платье «Сапфир»", price: 55000, img: "images/фото13.png", article: "E-004", size: "44-52", fabric: "Шелк, гипюр", color: "Глициновый, синий, аметистовый", silhouette: "А-силуэт", extraImages: [] },
-    { name: "Вечернее «Эмира»", price: 50000, img: "images/фото14.png", article: "E-005", size: "46-58", fabric: "Фатин", color: "Пудровый, аметистовый", silhouette: "Русалка", extraImages: [] },
-    { name: "Платье «Ноктюрн»", price: 45000, img: "images/фото15.png", article: "E-006", size: "42-52", fabric: "Атлас", color: "Стальной,темно-синий", silhouette: "Прямой", extraImages: [] },
-    { name: "Вечернее «Луара»", price: 40000, img: "images/фото16.png", article: "E-007", size: "44-54", fabric: "Сатин", color: "Сахарная вата, бежевый,белый", silhouette: "Песочные часы", extraImages: [] },
-    { name: "Платье «Джаз»", price: 35000, img: "images/фото17.png", article: "E-008", size: "42-50", fabric: "Гипюр", color: "Жасмин,серебро", silhouette: "Футляр", extraImages: [] },
-    { name: "Вечернее «Скарлет»", price: 30000, img: "images/фото18.png", article: "E-009", size: "44-52", fabric: "Органза", color: "Полынь, красный", silhouette: "Ампир", extraImages: [] }
-];
+    { name: "Вечернее «Адель»", price: 70000, img: "images/фото10.png", article: "E-001", size: "42-54", fabric: "Атлас", color: "Пудровый, голубой, бордовый", silhouette: "Русалка", extraImages: [], modelParams: "174-86-98" },
+    { name: "Вечернее «Блэк тафта»", price: 65000, img: "images/фото11.png", article: "E-002", size: "44-56", fabric: "Тафта, шифон", color: "Черничный, черный, фиолетовый", silhouette: "Пышный", extraImages: [], modelParams: "170-84-96" },
+    { name: "Вечернее «Марго»", price: 60000, img: "images/фото12.png", article: "E-003", size: "42-50", fabric: "Тафта", color: "Чёрный, изумруд", silhouette: "Греческий", extraImages: [], modelParams: "172-85-95" },
+    { name: "Платье «Сапфир»", price: 55000, img: "images/фото13.png", article: "E-004", size: "44-52", fabric: "Шелк, гипюр", color: "Глициновый, синий, аметистовый", silhouette: "А-силуэт", extraImages: [], modelParams: "176-88-100" },
+    { name: "Вечернее «Эмира»", price: 50000, img: "images/фото14.png", article: "E-005", size: "46-58", fabric: "Фатин", color: "Пудровый, аметистовый", silhouette: "Русалка", extraImages: [], modelParams: "168-82-94" },
+    { name: "Платье «Ноктюрн»", price: 45000, img: "images/фото15.png", article: "E-006", size: "42-52", fabric: "Атлас", color: "Стальной, темно-синий", silhouette: "Прямой", extraImages: [], modelParams: "171-85-97" },
+    { name: "Вечернее «Луара»", price: 40000, img: "images/фото16.png", article: "E-007", size: "44-54", fabric: "Сатин", color: "Сахарная вата, бежевый, белый", silhouette: "Песочные часы", extraImages: [], modelParams: "173-87-99" },
+    { name: "Платье «Джаз»", price: 35000, img: "images/фото17.png", article: "E-008", size: "42-50", fabric: "Гипюр", color: "Жасмин, серебро", silhouette: "Футляр", extraImages: [], modelParams: "169-83-93" },
+    { name: "Вечернее «Скарлет»", price: 30000, img: "images/фото18.png", article: "E-009", size: "44-52", fabric: "Органза", color: "Полынь, красный", silhouette: "Ампир", extraImages: [], modelParams: "175-89-101" }
+    ];
 
     const shoesCollection = [
         { name: "Туфли «Жемчужные»", price: 15000, img: "images/фото19.png", article: "S-001", size: "35-41", color: "Белый", material: "Натуральная кожа" },
@@ -251,27 +251,27 @@
     ];
 
     const accessoriesItems = [
-        { name: "Ободок «Весна»", price: 8500, img: "images/акс1.jpg", article: "A-001", color: "Серебро", material: "Сатин" },
-        { name: "Серьги «Белые розы»", price: 4200, img: "images/акс2.jpg", article: "A-002", color: "Белый", material: "Атлас" },
-        { name: "Серьги «Жемчужный бантик»", price: 3800, img: "images/акс3.jpg", article: "A-003", color: "Белый", material: "Жемчуг" },
-        { name: "Колье «Жемчужная роса»", price: 12500, img: "images/акс4.jpg", article: "A-004", color: "Белый", material: "Жемчуг, бисер" },
-        { name: "Серьги «Лёгкость»", price: 7000, img: "images/акс5.jpg", article: "A-005", color: "Шампань", material: "Органза" },
-        { name: "Колье жемчужное", price: 3500, img: "images/акс6.jpg", article: "A-006", color: "Белый", material: "Жемчуг" },
-        { name: "Колье «Слёзы счастья»", price: 2900, img: "images/акс7.png", article: "A-007", color: "Белый", material: "Жемчуг" },
-        { name: "Колье «Нимфа»", price: 9800, img: "images/акс8.jpg", article: "A-008", color: "Слоновая кость", material: "Жемчуг" },
-        { name: "Ободок «Цветущий сад»", price: 6500, img: "images/акс9.png", article: "A-009", color: "Белый", material: "Бисер" }
+    { name: "Ободок «Весна»", price: 8500, img: "images/акс1.jpg", article: "A-001", color: "Серебро", material: "Сатин", modelParams: "универсальный" },
+    { name: "Серьги «Белые розы»", price: 4200, img: "images/акс2.jpg", article: "A-002", color: "Белый", material: "Атлас", modelParams: "универсальный" },
+    { name: "Серьги «Жемчужный бантик»", price: 3800, img: "images/акс3.jpg", article: "A-003", color: "Белый", material: "Жемчуг", modelParams: "универсальный" },
+    { name: "Колье «Жемчужная роса»", price: 12500, img: "images/акс4.jpg", article: "A-004", color: "Белый", material: "Жемчуг, бисер", modelParams: "универсальный" },
+    { name: "Серьги «Лёгкость»", price: 7000, img: "images/акс5.jpg", article: "A-005", color: "Шампань", material: "Органза", modelParams: "универсальный" },
+    { name: "Колье жемчужное", price: 3500, img: "images/акс6.jpg", article: "A-006", color: "Белый", material: "Жемчуг", modelParams: "универсальный" },
+    { name: "Колье «Слёзы счастья»", price: 2900, img: "images/акс7.png", article: "A-007", color: "Белый", material: "Жемчуг", modelParams: "универсальный" },
+    { name: "Колье «Нимфа»", price: 9800, img: "images/акс8.jpg", article: "A-008", color: "Слоновая кость", material: "Жемчуг", modelParams: "универсальный" },
+    { name: "Ободок «Цветущий сад»", price: 6500, img: "images/акс9.png", article: "A-009", color: "Белый", material: "Бисер", modelParams: "универсальный" }
     ];
 
     const lingerieItems = [
-        { name: "Комплект «Нежность»", price: 8000, img: "images/фото28.png", article: "L-001", sizes: "S-XL", fabric: "Шелк", color: "Белый" },
-        { name: "Комплект «Императрица»", price: 12500, img: "images/фото29.png", article: "L-002", sizes: "M-XXL", fabric: "Кружево", color: "Белый" },
-        { name: "Комплект «Жемчуг»", price: 4500, img: "images/фото30.png", article: "L-003", sizes: "S-XXL", fabric: "Хлопок", color: "Жемчужный" },
-        { name: "Комплект «Лаванда»", price: 3200, img: "images/фото31.png", article: "L-004", sizes: "S-L", fabric: "Сатин", color: "Белый" },
-        { name: "Комплект «Свадебный»", price: 5900, img: "images/фото32.png", article: "L-005", sizes: "M-XL", fabric: "Шелк, кружево", color: "Слоновая кость" },
-        { name: "Комплект «Белая лилия»", price: 9800, img: "images/фото33.png", article: "L-006", sizes: "S-XL", fabric: "Шелк", color: "Белый" },
-        { name: "Комплект «Пион»", price: 7000, img: "images/фото34.png", article: "L-007", sizes: "M-XL", fabric: "Микросатин", color: "Белый" },
-        { name: "Комплект «Ангел»", price: 3600, img: "images/фото35.png", article: "L-008", sizes: "S-L", fabric: "Эластан", color: "Белый" },
-        { name: "Комплект «Жемчужный»", price: 4200, img: "images/фото36.png", article: "L-009", sizes: "M-XL", fabric: "Тюль", color: "Шампань" }
+    { name: "Комплект «Нежность»", price: 8000, img: "images/фото28.png", article: "L-001", sizes: "S-XL", fabric: "Шелк", color: "Белый", modelParams: "170-85-95" },
+    { name: "Комплект «Императрица»", price: 12500, img: "images/фото29.png", article: "L-002", sizes: "M-XXL", fabric: "Кружево", color: "Белый", modelParams: "172-86-96" },
+    { name: "Комплект «Жемчуг»", price: 4500, img: "images/фото30.png", article: "L-003", sizes: "S-XXL", fabric: "Хлопок", color: "Жемчужный", modelParams: "168-82-92" },
+    { name: "Комплект «Лаванда»", price: 3200, img: "images/фото31.png", article: "L-004", sizes: "S-L", fabric: "Сатин", color: "Белый", modelParams: "171-84-94" },
+    { name: "Комплект «Свадебный»", price: 5900, img: "images/фото32.png", article: "L-005", sizes: "M-XL", fabric: "Шелк, кружево", color: "Слоновая кость", modelParams: "174-86-98" },
+    { name: "Комплект «Белая лилия»", price: 9800, img: "images/фото33.png", article: "L-006", sizes: "S-XL", fabric: "Шелк", color: "Белый", modelParams: "173-85-97" },
+    { name: "Комплект «Пион»", price: 7000, img: "images/фото34.png", article: "L-007", sizes: "M-XL", fabric: "Микросатин", color: "Белый", modelParams: "175-87-99" },
+    { name: "Комплект «Ангел»", price: 3600, img: "images/фото35.png", article: "L-008", sizes: "S-L", fabric: "Эластан", color: "Белый", modelParams: "169-83-93" },
+    { name: "Комплект «Жемчужный»", price: 4200, img: "images/фото36.png", article: "L-009", sizes: "M-XL", fabric: "Тюль", color: "Шампань", modelParams: "170-84-95" }
     ];
 
     let lastOpenedItem = null;
@@ -337,7 +337,7 @@
         return { sliderDiv, imagesCount: allImages.length };
     }
 
-    function showProductPage(item, hasSlider = false) {
+function showProductPage(item, hasSlider = false) {
     lastOpenedItem = item;
     lastOpenedHasSlider = hasSlider;
     const modal = document.getElementById('productPageModal');
@@ -353,40 +353,117 @@
     
     const content = document.getElementById('productModalContent');
     content.innerHTML = '';
+    
+    // Параметры модели (формат: рост-грудь-бёдра) - просто выводим как есть
+    const modelParams = item.modelParams || null;
+    
     if (hasSlider && item.extraImages !== undefined) {
         const { sliderDiv } = createSliderForItem(item);
         const infoDiv = document.createElement('div');
         infoDiv.className = 'product-page-info';
+        
+        // Собираем дополнительную информацию для блока "Подробнее"
+        let extraInfoHtml = '';
+        if (item.fabric || item.material) {
+            extraInfoHtml += `<p><strong>Состав ткани:</strong> ${item.fabric || item.material}</p>`;
+        }
+        if (item.silhouette) {
+            extraInfoHtml += `<p><strong>Силуэт:</strong> ${item.silhouette}</p>`;
+        }
+        // Параметры модели (только если есть)
+        if (modelParams) {
+            extraInfoHtml += `<p><strong>Параметры модели:</strong> ${modelParams}</p>`;
+        }
+        
+        // Основная информация (видна всегда)
         infoDiv.innerHTML = `
             <h2>${item.name}</h2>
             <p><strong>Артикул:</strong> ${item.article || 'W-000'}</p>
-            <p><strong>Размеры в наличии:</strong> ${item.size || item.sizes || '42-56'}</p>
-            <p><strong>Состав ткани:</strong> ${item.fabric || item.material || 'Высококачественные материалы'}</p>
+            <p><strong>Размеры:</strong> ${item.size || item.sizes || '42-56'}</p>
             <p><strong>Цвета:</strong> ${item.color || 'в ассортименте'}</p>
-            <p><strong>Силуэт:</strong> ${item.silhouette || 'Классический'}</p>
             <p><strong>Цена:</strong> ${item.price.toLocaleString('ru-RU')} руб.</p>
+            <span class="more-info-link">Подробнее...</span>
+            <div class="product-more-info" style="display: none;">
+                <span class="hide-info-link">Скрыть ↑</span>
+                ${extraInfoHtml}
+            </div>
         `;
+        
+        // Добавляем обработчик для ссылки "Подробнее..."
+        const moreLink = infoDiv.querySelector('.more-info-link');
+        const moreBlock = infoDiv.querySelector('.product-more-info');
+        const hideLink = infoDiv.querySelector('.hide-info-link');
+        
+        moreLink.addEventListener('click', () => {
+            moreBlock.style.display = 'block';
+            moreLink.style.display = 'none';
+        });
+        
+        if (hideLink) {
+            hideLink.addEventListener('click', () => {
+                moreBlock.style.display = 'none';
+                moreLink.style.display = 'inline-block';
+            });
+        }
+        
         const flexContainer = document.createElement('div');
         flexContainer.className = 'product-page-content';
         flexContainer.appendChild(sliderDiv);
         flexContainer.appendChild(infoDiv);
         content.appendChild(flexContainer);
     } else {
+        // Для товаров без слайдера
+        let extraInfoHtml = '';
+        if (item.fabric || item.material) {
+            extraInfoHtml += `<p><strong>Состав ткани:</strong> ${item.fabric || item.material}</p>`;
+        }
+        if (item.silhouette) {
+            extraInfoHtml += `<p><strong>Силуэт:</strong> ${item.silhouette}</p>`;
+        }
+        // Параметры модели (только если есть)
+        if (modelParams) {
+            extraInfoHtml += `<p><strong>Параметры модели:</strong> ${modelParams}</p>`;
+        }
+        
         const noSliderHtml = `
             <div class="product-page-content">
                 <img src="${item.img}" alt="${item.name}" class="product-page-img" onerror="this.src='https://placehold.co/600x800/f7e8dd/c48154?text=Товар'">
                 <div class="product-page-info">
                     <h2>${item.name}</h2>
                     <p><strong>Артикул:</strong> ${item.article || 'ACC-000'}</p>
-                    <p><strong>Размеры в наличии:</strong> ${item.size || item.sizes || 'уточняйте'}</p>
-                    <p><strong>Состав ткани:</strong> ${item.fabric || item.material || 'Высококачественные материалы'}</p>
+                    <p><strong>Размеры:</strong> ${item.size || item.sizes || 'уточняйте'}</p>
                     <p><strong>Цвета:</strong> ${item.color || 'в ассортименте'}</p>
                     <p><strong>Цена:</strong> ${item.price.toLocaleString('ru-RU')} руб.</p>
+                    <span class="more-info-link">Подробнее...</span>
+                    <div class="product-more-info" style="display: none;">
+                        <span class="hide-info-link">Скрыть ↑</span>
+                        ${extraInfoHtml}
+                    </div>
                 </div>
             </div>
         `;
         content.innerHTML = noSliderHtml;
+        
+        // Добавляем обработчик для ссылки "Подробнее..." и "Скрыть"
+        const moreLink = content.querySelector('.more-info-link');
+        const moreBlock = content.querySelector('.product-more-info');
+        const hideLink = content.querySelector('.hide-info-link');
+        
+        if (moreLink && moreBlock) {
+            moreLink.addEventListener('click', () => {
+                moreBlock.style.display = 'block';
+                moreLink.style.display = 'none';
+            });
+        }
+        
+        if (hideLink && moreBlock && moreLink) {
+            hideLink.addEventListener('click', () => {
+                moreBlock.style.display = 'none';
+                moreLink.style.display = 'inline-block';
+            });
+        }
     }
+    
     modal.style.display = 'block';
     const orderBtn = document.getElementById('fromProductToOrderBtn');
     const newBtn = orderBtn.cloneNode(true);
@@ -396,7 +473,6 @@
         showOrderModal(item, false);
     });
 }
-
     function showOrderModal(item, fromCart = false) {
         isFromCart = fromCart;
         lastOpenedItem = item;
