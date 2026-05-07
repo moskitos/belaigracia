@@ -1492,7 +1492,7 @@ body:has(.page-section.active-section) .pearl-wrapper {
         width: 100%;
         height: auto;
         max-height: 50vh;
-        object-fit: cover;
+        object-fit: contain;
         background: #f5ede5;
     }
     
@@ -1613,7 +1613,7 @@ body:has(.page-section.active-section) .pearl-wrapper {
     
     .slider-main-image {
         max-height: 48vh;
-        object-fit: cover;
+        object-fit: contain;
     }
     
     .slider-btn {
