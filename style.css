@@ -1654,3 +1654,8 @@ body:has(.page-section.active-section) .pearl-wrapper {
         height: 8px;
     }
 }
+@media (max-width: 768px) {
+    .scroll-top {
+        bottom: 80px;
+    }
+}
